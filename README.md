@@ -1,4 +1,4 @@
-# 🇵🇹🦠 Corona Bar
+# 🇵🇹🦠 CoronaBar
 
 *Fica informado quanto aos casos de [coronavírus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) em Portugal a partir da tua menu bar. Só na eventualidade de quereres acrescentar  stress á tua vida.*
 
@@ -13,11 +13,11 @@ Uma aplicação simples para a tua menu bar, que mostra alguns números  importa
 
 ## Download
 
-**[➡️ FAZ DOWNLOAD AQUI](https://github.com/duarteocarmo/coronapt/releases/latest/download/Corona_PT.zip)**
+**[➡️ FAZ DOWNLOAD AQUI](https://github.com/duarteocarmo/coronapt/releases/latest/download/CoronaBar.zip)**
 
 *⚠️ Utilizadores de mac devem abrir a aplicação  com um [right click, ou ctrl+click](https://support.apple.com/en-us/HT207700) ⚠️*
 
-*Nota: Mac Only - Se quiserem desenvolver para Windows - feel free to [pull request](https://github.com/duarteocarmo/coronapt/pulls)!*
+*Nota: Mac Only - Se quiserem desenvolver para Windows - feel free to [pull request](https://github.com/duarteocarmo/coronabar/pulls)!*
 
 ## De onde vem a informação? 
 
