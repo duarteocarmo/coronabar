@@ -33,4 +33,4 @@ Porque não? 🤷
 
 ## Sobre mim
 
-[Duarte O.Carmo](https://duartecarmo.com)
+[Duarte O.Carmo](https://duarteocarmo.com)
