@@ -9,7 +9,7 @@ SOURCE_PAGE = "https://covid19.min-saude.pt/ponto-de-situacao-atual-em-portugal/
 
 class CoronaApp(object):
     def __init__(self):
-        self.app = rumps.App("Corona PT", "🦠")
+        self.app = rumps.App("CoronaBar", "🦠")
         self.data = self.get_data(sender=None)
 
         self.suspected = rumps.MenuItem(
