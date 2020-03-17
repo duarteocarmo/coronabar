@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['corona_pt.py']
+APP = ['app.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
