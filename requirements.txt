@@ -1,0 +1,12 @@
+altgraph==0.17
+certifi==2019.11.28
+chardet==3.0.4
+idna==2.9
+macholib==1.14
+modulegraph==0.18
+py2app==0.21
+pyobjc-core==6.1
+pyobjc-framework-Cocoa==6.1
+requests==2.23.0
+rumps==0.3.0
+urllib3==1.25.8
