@@ -6,11 +6,9 @@
 
 Uma aplicação simples para a tua menu bar, que mostra alguns números  importantes relativo aos casos de [coronavírus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) em Portugal. 
 
-<center>
-
-![screenshot](images/screenshot.png)
-
-</center>
+<p align="center">
+  <img  height="250" src="images/screenshot.png">
+</p>
 
 ## Download
 
