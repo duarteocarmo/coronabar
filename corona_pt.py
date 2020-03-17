@@ -9,7 +9,7 @@ ABOUT_PAGE = "https://duarteocarmo.com/about"
 
 class CoronaApp(object):
     def __init__(self):
-        self.app = rumps.App("Corona", "🦠")
+        self.app = rumps.App("Corona PT", "🦠")
         self.data = self.get_data(sender=None)
 
         self.suspected = rumps.MenuItem(
