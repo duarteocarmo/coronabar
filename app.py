@@ -5,7 +5,7 @@ import webbrowser
 
 
 class CoronaBar(object):
-    base_api_url = "https://corona.lmao.ninja/countries"
+    base_api_url = "https://coronavirus-19-api.herokuapp.com/countries"
     default_country = "USA"
 
     def __init__(self):
@@ -40,6 +40,7 @@ class CoronaBar(object):
         for k, v in data.items():
             self.app.menu.add(rumps.MenuItem(title=f"{k}: {v}"))
         self.app.menu.add(rumps.MenuItem(title=f"Updated at {current_time}"))
+        print("Updated.")
 
     def run(self):
         self.app.run()
