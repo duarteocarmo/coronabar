@@ -7,16 +7,19 @@ import webbrowser
 class CoronaBar(object):
     base_api_url = "https://coronavirus-19-api.herokuapp.com/countries"
     default_country = "USA"
+    update_interval = 5 # seconds
 
     def __init__(self):
         self.app = rumps.App("Corona Bar", "🦠")
         self.countries = rumps.MenuItem(title="Select Country")
+        self.country = self.default_country
 
         self.app.menu = [
             self.countries,
         ]
         country_list = self.get_country_list()
-        self.setup(country_list, self.default_country)
+        self.timer = rumps.Timer(self.on_update, self.update_interval)
+        self.setup(country_list, self.country)
 
     def setup(self, country_list, default_country):
         for country in country_list:
@@ -29,6 +32,7 @@ class CoronaBar(object):
         self.update_country_listing(
             rumps.MenuItem(title=f"{self.default_country}")
         )
+        self.timer.start()
 
     def update_country_listing(self, country):
         for k, v in self.app.menu.items():
@@ -40,7 +44,11 @@ class CoronaBar(object):
         for k, v in data.items():
             self.app.menu.add(rumps.MenuItem(title=f"{k}: {v}"))
         self.app.menu.add(rumps.MenuItem(title=f"Updated at {current_time}"))
+        self.country = country.title
         print("Updated.")
+
+    def on_update(self, sender):
+        print(self.country)
 
     def run(self):
         self.app.run()
@@ -55,6 +63,8 @@ class CoronaBar(object):
         response = requests.request("GET", f"{self.base_api_url}/{country}")
         data = response.json()
         return data
+
+
 
 
 if __name__ == "__main__":
