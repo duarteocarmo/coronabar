@@ -3,102 +3,59 @@ import requests
 import datetime
 import webbrowser
 
-URL = "https://services.arcgis.com/CCZiGSEQbAxxFVh3/arcgis/rest/services/COVID19Portugal_UltimoRel/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=102100&resultOffset=0&resultRecordCount=50"
-ABOUT_PAGE = "https://github.com/duarteocarmo/coronapt"
-SOURCE_PAGE = "https://covid19.min-saude.pt/ponto-de-situacao-atual-em-portugal/"
 
-class CoronaApp(object):
+class CoronaBar(object):
+    base_api_url = "https://corona.lmao.ninja/countries"
+    default_country = "USA"
+
     def __init__(self):
-        self.app = rumps.App("CoronaBar", "🦠")
-        self.data = self.get_data(sender=None)
-
-        self.suspected = rumps.MenuItem(
-            title=f"Suspeitos: {self.data.get('casossuspeitos')}"
-        )
-        self.confirmed_cases = rumps.MenuItem(
-            title=f"Confirmados: {self.data.get('casosconfirmados')}"
-        )
-        self.recovered = rumps.MenuItem(
-            title=f"Recuperados: {self.data.get('recuperados')}"
-        )
-        self.deceased = rumps.MenuItem(
-            title=f"Óbitos: {self.data.get('nrobitos')}"
-        )
-        self.last_refresh = rumps.MenuItem(
-            title=f"Data: {self.get_date_from_timestamp(self.data.get('datarelatorio'))}"
-        )
-        self.source = rumps.MenuItem(title="Fonte: DGS", callback=self.source)
-        self.refresh = rumps.MenuItem(title="Refresh", callback=self.get_data)
-        self.about = rumps.MenuItem(title="About", callback=self.about)
+        self.app = rumps.App("Corona Bar", "🦠")
+        self.countries = rumps.MenuItem(title="Select Country")
 
         self.app.menu = [
-            self.suspected,
-            self.confirmed_cases,
-            self.recovered,
-            self.deceased,
-            self.last_refresh,
-            self.refresh,
-            self.source,
-            self.about,
+            self.countries,
         ]
+        country_list = self.get_country_list()
+        self.setup(country_list, self.default_country)
 
-    def get_data(self, sender):
-
-        try:
-
-            response = requests.request("GET", URL)
-
-            data = response.json().get("features")[0].get("attributes")
-
-            self.data = data
-
-            if len(list(self.app.menu)) > 1:
-                self.suspected.title = (
-                    f"Suspeitos: {data.get('casossuspeitos')}"
+    def setup(self, country_list, default_country):
+        for country in country_list:
+            self.countries.add(
+                rumps.MenuItem(
+                    title=f"{country}", callback=self.update_country_listing
                 )
-                self.confirmed_cases.title = (
-                    f"Confirmados: {data.get('casosconfirmados')}"
-                )
-                self.recovered.title = (
-                    f"Recuperados: {data.get('recuperados')}"
-                )
-                self.deceased.title = f"Óbitos: {data.get('nrobitos')}"
-                self.last_refresh.title = f"Data: {self.get_date_from_timestamp(data.get('datarelatorio'))}"
-                print("Updated.")
+            )
 
-            return data
+        self.update_country_listing(
+            rumps.MenuItem(title=f"{self.default_country}")
+        )
 
-        except Exception as e:
-            print(str(e))
-            return False
+    def update_country_listing(self, country):
+        for k, v in self.app.menu.items():
+            if k not in ["Select Country", "Quit"]:
+                del self.app.menu[k]
 
-    def about(self,  sender):
-        try:
-            webbrowser.open(ABOUT_PAGE)
-        except Exception as e:
-            print(str(e))
-            return True
-    def source(self,  sender):
-        try:
-            webbrowser.open(SOURCE_PAGE)
-        except Exception as e:
-            print(str(e))
-            return True
-
-
-    @staticmethod
-    def get_date_from_timestamp(timestamp):
-        timestamp = timestamp / 1000
-        # return datetime.datetime.utcfromtimestamp(timestamp).strftime(
-        #     "%d/%m %H:%M"
-        # )
-        return datetime.datetime.now().strftime("%d/%m %H:%M")
+        data = self.get_country_data(country.title)
+        current_time = datetime.datetime.now().strftime("%H:%M")
+        for k, v in data.items():
+            self.app.menu.add(rumps.MenuItem(title=f"{k}: {v}"))
+        self.app.menu.add(rumps.MenuItem(title=f"Updated at {current_time}"))
 
     def run(self):
-
         self.app.run()
+
+    def get_country_list(self):
+        response = requests.request("GET", self.base_api_url)
+        data = response.json()
+        country_list = [e["country"] for e in data]
+        return sorted(country_list)
+
+    def get_country_data(self, country):
+        response = requests.request("GET", f"{self.base_api_url}/{country}")
+        data = response.json()
+        return data
 
 
 if __name__ == "__main__":
-    app = CoronaApp()
+    app = CoronaBar()
     app.run()
