@@ -15,7 +15,7 @@ A simple app that sits on your menu bar, that allows you to get informed on the 
 
 ## Download
 
-**[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/coronapt/releases/latest/download/CoronaBar.zip)**
+**[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/oronabar/releases/latest/download/CoronaBar.zip)**
 
 *⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". ⚠️*
 
