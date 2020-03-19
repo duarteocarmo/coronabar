@@ -13,15 +13,16 @@ A simple app that sits on your menu bar, that allows you to get informed on the 
   <img  height="400" src="images/screenshot.png">
 </p>
 
-## Download
+## How to download?
 
 **[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/coronabar/releases/latest/download/CoronaBar.zip)**
 
-*⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". ⚠️*
+*⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". If you are having problems see [this link](https://support.apple.com/en-us/HT202491). ⚠️*
 
-*Note: Mac Only - For windows or linux, please [pull request](https://github.com/duarteocarmo/coronabar/pulls)!*
+ 
+*Note: Mac Only (tested on Catalina (yikes!)) - For windows or linux, please [pull request](https://github.com/duarteocarmo/coronabar/pulls)!*
 
-## Where does the information come from? 
+## Where does the data come from? 
 
 Thanks a lot to [this repo](https://github.com/javieraviles/covidAPI) for providing an API!
 
