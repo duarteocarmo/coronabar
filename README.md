@@ -1,11 +1,13 @@
-# 🇵🇹🦠 CoronaBar
+# 🦠 CoronaBar
+[![Supported Python versions](https://img.shields.io/badge/python-3.7-blue)]() [![GitHub license](https://img.shields.io/github/license/duarteocarmo/think-cell.svg)](https://github.com/duarteocarmo/coronabar/blob/master/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black) 
 
-*Fica informado quanto aos casos de [coronavírus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) em Portugal a partir da tua menu bar. Só na eventualidade de quereres acrescentar  stress á tua vida.*
+
+*Get information about current cases of [coronavirus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) right from the menu bar. Just in case you want to add stress to your life.*
 
 
-## O quê? 
+## What?
 
-Uma aplicação simples para a tua menu bar, que mostra alguns números  importantes relativo aos casos de [coronavírus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) em Portugal. 
+A simple app that sits on your menu bar, that allows you to get informed on the cases of coronavirus in different countries. It also updates every 30 mins. 
 
 <p align="center">
   <img  height="250" src="images/screenshot.png">
@@ -13,24 +15,28 @@ Uma aplicação simples para a tua menu bar, que mostra alguns números  importa
 
 ## Download
 
-**[➡️ FAZ DOWNLOAD AQUI](https://github.com/duarteocarmo/coronapt/releases/latest/download/CoronaBar.zip)**
+**[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/coronapt/releases/latest/download/CoronaBar.zip)**
 
-*⚠️ Utilizadores de mac devem abrir a aplicação  com um [right click, ou ctrl+click](https://support.apple.com/en-us/HT207700) ⚠️*
+*⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". ⚠️*
 
-*Nota: Mac Only - Se quiserem desenvolver para Windows - feel free to [pull request](https://github.com/duarteocarmo/coronabar/pulls)!*
+*Note: Mac Only - For windows or linux, please [pull request](https://github.com/duarteocarmo/coronabar/pulls)!*
 
-## De onde vem a informação? 
+## Where does the information come from? 
 
-A informação vem diretamente  do [site da Direção Geral da Saúde (DGS)](https://www.dgs.pt/). Se quiseres saber que API estou a consumir, o url está [neste script](app.py).
+Thanks a lot to [this repo](https://github.com/javieraviles/covidAPI) for providing an API!
 
-## Como?
-App desenvolvida usando python 🐍 e uma framework chamada [rumps](https://rumps.readthedocs.io/en/latest/index.html).
+Information comes originally from [worldometer](https://www.worldometers.info/coronavirus/). 
 
-## Porquê? 
+## How?
+Python 3 and [rumps](https://rumps.readthedocs.io/en/latest/index.html).
 
-Porque não? 🤷
+❤️🐍
+
+## Why? 
+
+Why not? 🤷
 
 
-## Sobre mim
+## About me
 
 [Duarte O.Carmo](https://duarteocarmo.com)
