@@ -10,7 +10,7 @@
 A simple app that sits on your menu bar, that allows you to get informed on the cases of coronavirus in different countries. It also updates every 30 mins. 
 
 <p align="center">
-  <img  height="250" src="images/screenshot.png">
+  <img  height="400" src="images/screenshot.png">
 </p>
 
 ## Download
