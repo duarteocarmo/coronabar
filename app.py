@@ -14,7 +14,7 @@ class CoronaBar(object):
     def __init__(self):
         self.app = rumps.App("Corona Bar", "🦠")
         self.countries = rumps.MenuItem(title="Select Country")
-        self.about = rumps.MenuItem(title="About", callback=self.about)
+        self.about = rumps.MenuItem(title="About", callback=self.open_page)
 
         self.country = self.default_country
 
@@ -35,7 +35,7 @@ class CoronaBar(object):
             rumps.MenuItem(title=f"{self.default_country}")
         )
 
-    def about(self, sender):
+    def open_page(self, sender):
         try:
             webbrowser.open(self.about_url)
         except Exception as e:
