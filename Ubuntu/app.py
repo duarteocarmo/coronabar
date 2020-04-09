@@ -34,8 +34,7 @@ class CoronaMenu(Gtk.Menu):
         self.append(item_quit)
 
         #self.country = self.default_country
-        #country_list = self.get_country_list()
-        country_list = ['Portugal', 'USA']
+        country_list = self.get_country_list()
         self.setup(country_list)
 
         self.show_all()
@@ -101,8 +100,6 @@ class CoronaMenu(Gtk.Menu):
         return sorted(country_list)
 
     def get_country_data(self, country):
-        #return {'items':"lalala"}
-        #country = 'USA'
         response = requests.request("GET", f"{self.base_api_url}/{country}")
         data = response.json()
         return data
