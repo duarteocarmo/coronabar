@@ -7,6 +7,7 @@ gi.require_version('AppIndicator3', '0.1')
 from gi.repository import AppIndicator3 as appindicator
 
 import datetime
+import webbrowser
 
 APPINDICATOR_ID = 'Coronabar'
 
@@ -64,7 +65,7 @@ class CoronaMenu(Gtk.Menu):
             self.append(Gtk.MenuItem(label=self.string_mapper(k, v)))
         current_time = datetime.datetime.now().strftime("%H:%M")
         self.append(Gtk.MenuItem(label=f"Updated at {current_time}"))
-        self.timer = GLib.timeout_add(self.update_interval, self.on_update)
+        self.timer = GLib.timeout_add(self.update_interval, self.update_menu, self, country)
         self.show_all()
                     
     def on_update(self):
@@ -81,11 +82,11 @@ class CoronaMenu(Gtk.Menu):
             self.insert(
                 Gtk.MenuItem(label=self.string_mapper(k, v)), 1
             )
-        self.show_all()
         
         current_time = datetime.datetime.now().strftime("%H:%M")
         self.insert(Gtk.MenuItem(label=f"Updated at {current_time}"), 1
         )
+        self.show_all()
 
 
     def quit(self, widget):
