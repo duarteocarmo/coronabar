@@ -59,7 +59,7 @@ class CoronaMenu(Gtk.Menu):
         self.append(current)
                   
     def create_country_listing(self, country):
-        data = self.get_country_data(country.title)
+        data = self.get_country_data(country)
         for k, v in data.items():
             self.append(Gtk.MenuItem(label=self.string_mapper(k, v)))
         current_time = datetime.datetime.now().strftime("%H:%M")
@@ -73,9 +73,10 @@ class CoronaMenu(Gtk.Menu):
                 k.destroy() 
     
     def update_menu(self, widget, country):
+        print(country)
         print("updating menu")
         self.on_update()
-        data = self.get_country_data(country.title)
+        data = self.get_country_data(country)
         for k, v in data.items():
             self.insert(
                 Gtk.MenuItem(label=self.string_mapper(k, v)), 1
@@ -100,7 +101,7 @@ class CoronaMenu(Gtk.Menu):
 
     def get_country_data(self, country):
         #return {'items':"lalala"}
-        country = 'USA'
+        #country = 'USA'
         response = requests.request("GET", f"{self.base_api_url}/{country}")
         data = response.json()
         return data
