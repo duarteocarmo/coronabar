@@ -1,0 +1,65 @@
+name: coronabar
+base: core18
+version: 'master'
+summary: Get information about current cases of coronavirus right from the menu bar.
+description: |
+    Get information about current cases of coronavirus right from the menu bar.
+    Just in case you want to add stress to your life.
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
+
+
+parts:
+  desktop-gtk3:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: gtk
+    plugin: make
+    make-parameters: ["FLAVOR=gtk3"]
+    build-packages:
+      - build-essential
+      - libgtk-3-dev
+    stage-packages:
+      - libxkbcommon0  # XKB_CONFIG_ROOT
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libgtk-3-0
+      - libgdk-pixbuf2.0-0
+      - libglib2.0-bin
+      - libgtk-3-bin
+      - unity-gtk3-module
+      - libappindicator3-1
+      - locales-all
+      - xdg-user-dirs
+      - ibus-gtk3
+      - libibus-1.0-5
+      - fcitx-frontend-gtk3
+
+  coronabar:
+    source: https://github.com/lapisdecor/coronabar.git
+    source-type: git
+    #source-branch: v1.0
+    # See 'snapcraft plugins'
+    plugin: python
+    stage-packages:
+       - python3-gi
+       - python3-xdg
+       - libcanberra-gtk3-module
+       - gir1.2-gtk-3.0
+       - gir1.2-appindicator3-0.1
+       - python3-requests
+    after: [desktop-gtk3]
+
+apps:
+  coronabar:
+    command: desktop-launch $SNAP/bin/coronabar
+    plugs:
+      - x11
+      - unity7
+      - wayland
+      - desktop
+      - gsettings
+      - opengl
