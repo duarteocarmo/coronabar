@@ -7,6 +7,7 @@ OPTIONS = {}
 SETUP = []
 INSTALL = []
 SCRIPT = []
+PACKAGES = []
 
 if sys.platform.startswith('darwin'):
     APP = ['app.py']
@@ -28,11 +29,13 @@ elif sys.platform.startswith('linux'):
     DATA_FILES = []
     SETUP = []
     SCRIPT = ['bin/coronabar']
+    packages = find_packages()
     
 
 setup(
         app=APP,
         name='CoronaBar',
+        packages=PACKAGES        
         data_files=DATA_FILES,
         options=OPTIONS,
         setup_requires=SETUP,
