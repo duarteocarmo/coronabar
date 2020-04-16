@@ -35,7 +35,7 @@ elif sys.platform.startswith('linux'):
 setup(
         app=APP,
         name='CoronaBar',
-        packages=PACKAGES        
+        packages=PACKAGES,        
         data_files=DATA_FILES,
         options=OPTIONS,
         setup_requires=SETUP,
