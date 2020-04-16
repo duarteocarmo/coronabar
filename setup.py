@@ -26,9 +26,6 @@ if sys.platform.startswith('darwin'):
 elif sys.platform.startswith('linux'):
     APP = ['app.py']
     DATA_FILES = []
-    OPTIONS = {
-            'packages': [],
-        }
     SETUP = []
     SCRIPT = ['bin/coronabar']
     
@@ -40,5 +37,5 @@ setup(
         options=OPTIONS,
         setup_requires=SETUP,
         install_requires=INSTALL,
-        scripts=SCRIPT
+        scripts=SCRIPT,
         )
