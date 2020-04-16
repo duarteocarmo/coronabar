@@ -29,7 +29,7 @@ elif sys.platform.startswith('linux'):
     DATA_FILES = []
     SETUP = []
     SCRIPT = ['bin/coronabar']
-    packages = find_packages()
+    PACKAGES = find_packages()
     
 
 setup(
