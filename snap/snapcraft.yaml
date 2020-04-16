@@ -63,3 +63,4 @@ apps:
       - desktop
       - gsettings
       - opengl
+      - network
