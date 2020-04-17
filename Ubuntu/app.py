@@ -97,7 +97,7 @@ class CoronaMenu(Gtk.Menu):
         response = requests.request("GET", self.base_api_url)
         data = response.json()
         country_list = [e["country"] for e in data]
-        return sorted(country_list)
+        return sorted(country_list)[1:]
 
     def get_country_data(self, country):
         response = requests.request("GET", f"{self.base_api_url}/{country}")
