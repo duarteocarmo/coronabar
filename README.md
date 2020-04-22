@@ -17,7 +17,7 @@ A simple app that sits on your menu bar, that allows you to get informed on the 
 ### MacOS
 **[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/coronabar/releases/latest/download/CoronaBar.zip)**
 
-*⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". If you are having problems see [this link](https://support.apple.com/en-us/HT202491). ⚠️*
+*⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". If you are having problems see [this link](https://support.apple.com/en-us/HT202491).*
 
 ### Linux 
 
