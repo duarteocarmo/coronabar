@@ -8,8 +8,13 @@ from gi.repository import AppIndicator3 as appindicator
 
 import datetime
 import webbrowser
+import os
+#from pkg_resources import resource_filename
+
 
 APPINDICATOR_ID = 'Coronabar'
+filepath = os.path.abspath('../snap/gui/')+"/icon.png"
+print(filepath)
 
 class CoronaMenu(Gtk.Menu):
     base_api_url = "https://coronavirus-19-api.herokuapp.com/countries"
@@ -131,7 +136,7 @@ class CoronaMenu(Gtk.Menu):
 class Gui:
     def __init__(self):
         self.indicator = appindicator.Indicator.new(APPINDICATOR_ID,
-                                           Gtk.STOCK_DIALOG_INFO,
+                                           filepath,
                                            appindicator.IndicatorCategory.APPLICATION_STATUS)
         self.indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
         self.my_menu = CoronaMenu()
