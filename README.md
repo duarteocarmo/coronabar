@@ -21,11 +21,14 @@ A simple app that sits on your menu bar, that allows you to get informed on the 
 
 ### Linux 
 
+<a alt="Get it from the Snap Store" href="https://snapcraft.io/coronabar"><img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" width="100"></a>
+
 `sudo snap install coronabar`
 
 *Note: Depends on gnome, might not be available on all distros, tested on ubuntu.*
 
 Thanks to the amazing [lapisdecor](https://github.com/lapisdecor) for the port 😊!
+
 ## Where does the data come from? 
 
 Thanks a lot to [this repo](https://github.com/javieraviles/covidAPI) for providing an API!
