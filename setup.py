@@ -40,5 +40,6 @@ setup(
         options=OPTIONS,
         setup_requires=SETUP,
         install_requires=INSTALL,
+        include_package_data=True,
         scripts=SCRIPT,
         )
