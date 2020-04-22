@@ -9,11 +9,11 @@ from gi.repository import AppIndicator3 as appindicator
 import datetime
 import webbrowser
 import os
-#from pkg_resources import resource_filename
+from pkg_resources import resource_filename
 
 
 APPINDICATOR_ID = 'Coronabar'
-filepath = os.path.abspath('snap/coronabar/snap/gui/')+"/icon.png"
+filepath = resource_filename(__name__, 'icon/' + "icon.png")"
 print(filepath)
 
 class CoronaMenu(Gtk.Menu):
@@ -136,7 +136,7 @@ class CoronaMenu(Gtk.Menu):
 class Gui:
     def __init__(self):
         self.indicator = appindicator.Indicator.new(APPINDICATOR_ID,
-                                           filepath,
+                                           os.path.abspath(filepath),
                                            appindicator.IndicatorCategory.APPLICATION_STATUS)
         self.indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
         self.my_menu = CoronaMenu()
