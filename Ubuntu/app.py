@@ -13,7 +13,7 @@ from pkg_resources import resource_filename
 
 
 APPINDICATOR_ID = 'Coronabar'
-filepath = resource_filename(__name__, 'icon/' + "icon.png")"
+filepath = resource_filename(__name__, 'icon/' + "icon.png")
 print(filepath)
 
 class CoronaMenu(Gtk.Menu):
