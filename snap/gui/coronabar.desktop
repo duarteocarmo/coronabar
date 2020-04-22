@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=coronabar
+Comment=covid-19 info right on your desktop bar
+Exec=coronabar
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;
