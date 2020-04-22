@@ -13,7 +13,7 @@ import os
 
 
 APPINDICATOR_ID = 'Coronabar'
-filepath = os.path.abspath('../snap/gui/')+"/icon.png"
+filepath = os.path.abspath('snap/coronabar/snap/gui/')+"/icon.png"
 print(filepath)
 
 class CoronaMenu(Gtk.Menu):
