@@ -129,7 +129,7 @@ class CoronaMenu(Gtk.Menu):
     @staticmethod
     def is_camel_case(s):
         # https://stackoverflow.com/a/10182901 thanks :)
-        return s != s
+        return s != s.lower() and s != s.upper() and "_" not in s
 
 
 
