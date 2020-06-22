@@ -112,8 +112,8 @@ class CoronaMenu(Gtk.Menu):
     # STRING MAPPER
     def string_mapper(self, key, value):
         if not self.is_camel_case(key):
-
             return f"{key.title()}: {value}"
+            
         elif key == "todayCases":
             return f"Cases Today: {value}"
 
@@ -121,7 +121,16 @@ class CoronaMenu(Gtk.Menu):
             return f"Deaths Today: {value}"
 
         elif key == "casesPerOneMillion":
-            return f"Per Million: {value}"
+            return f"Cases per Million: {value}"
+            
+        elif key == "testsPerOneMillion":
+            return f"Tests Per Million: {value}"
+
+        elif key == "totalTests":
+            return f"Total Tests: {value}"
+
+        elif key == "deathsPerOneMillion":
+            return f"Deaths Per Million: {value}"
 
         else:
             return f"{key}: {value}"
