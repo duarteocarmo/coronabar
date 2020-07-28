@@ -43,18 +43,15 @@ class CoronaBar(object):
             return False
 
     def create_country_listing(self, country):
-        # print("Creating")
         data = self.get_country_data(country.title)
         for k, v in data.items():
             self.app.menu.add(rumps.MenuItem(self.string_mapper(k, v)))
         current_time = datetime.datetime.now().strftime("%H:%M")
         self.app.menu.add(rumps.MenuItem(title=f"Updated at {current_time}"))
-        # print("Created")
         self.timer = rumps.Timer(self.on_update, self.update_interval)
         self.timer.start()
 
     def update_country_listing(self, country):
-        # print("Update")
         self.country = country.title
         for k, v in self.app.menu.items():
             if k not in ["Select Country", "Quit", "About"]:
@@ -70,10 +67,8 @@ class CoronaBar(object):
         self.app.menu.insert_before(
             "Quit", rumps.MenuItem(title=f"Updated at {current_time}")
         )
-        # print(f"Updated,country is {self.country}")
 
     def on_update(self, sender):
-        # print("Timer is running.")
         self.update_country_listing(rumps.MenuItem(title=self.country))
 
     def run(self):
