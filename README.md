@@ -5,16 +5,16 @@
 
 *Get information about current cases of [coronavirus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) right from the menu bar. Just in case you want to add stress to your life.*
 
-## What?
+## What is it?
 
 A simple app that sits on your menu bar, that allows you to get informed on the cases of coronavirus in different countries. It also updates every 30 mins. 
 
 <p align="center">
-  <img  height="400" src="images/screenshot.png">
+  <img height="400" src="images/screenshot.png">
 </p>
 
 ## How to download?
-### MacOS
+### macOS
 **[➡️ DOWNLOAD HERE](https://github.com/duarteocarmo/coronabar/releases/latest/download/CoronaBar.zip)**
 
 *⚠️ Mac users, remember to [right click, or ctrl+click](https://support.apple.com/en-us/HT207700) after unzipping and hitting "open". If you are having problems see [this link](https://support.apple.com/en-us/HT202491).*
@@ -33,7 +33,7 @@ Thanks to the amazing [lapisdecor](https://github.com/lapisdecor) for the port �
 
 Thanks a lot to [this repo](https://github.com/javieraviles/covidAPI) for providing an API!
 
-Information comes originally from [worldometer](https://www.worldometers.info/coronavirus/). 
+Information comes originally from [Worldometer](https://www.worldometers.info/coronavirus/). 
 
 ## How?
 Python 3 and [rumps](https://rumps.readthedocs.io/en/latest/index.html).
@@ -47,4 +47,4 @@ Why not? 🤷
 
 ## About me
 
-[Duarte O.Carmo](https://duarteocarmo.com)
+[Duarte O.Carmo](https://duarteocarmo.com).
