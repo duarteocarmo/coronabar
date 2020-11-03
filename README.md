@@ -47,4 +47,4 @@ Why not? 🤷
 
 ## About me
 
-I am [Duarte O.Carmo](https://duarteocarmo.com).
+[Duarte O.Carmo](https://duarteocarmo.com).
