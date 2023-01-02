@@ -1,7 +1,8 @@
 # 🦠 CoronaBar
 [![Supported Python versions](https://img.shields.io/badge/python-3.7-blue)]() [![GitHub license](https://img.shields.io/github/license/duarteocarmo/think-cell.svg)](https://github.com/duarteocarmo/coronabar/blob/master/LICENSE) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black) 
 
-**🎊 UPDATE!** Coronabar is now available for Ubuntu as a snap installable package!
+**🦠 WARNING!** The [API](https://www.worldometers.info/coronavirus/) supporting this App no longer works. This repository has been archived. If you like this project, go ahead and submit a PR. Would welcome more maintainers!
+
 
 *Get information about current cases of [coronavirus](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) right from the menu bar. Just in case you want to add stress to your life.*
 
